@@ -13,14 +13,14 @@
 
 <div class="container">
   <div class="jumbotron bg-dark text-white">
-    <h1>Trivia Game <span id="counter" class="badge badge-light">120</span></h1>
+    <h1>Trivia Game <span id="timer" class="badge badge-light"></span></h1>
 
     <div class="row">
       <div class="col-lg-12">
 
         <div class="card my-2">
           <div class="card-body bg-dark text-white">
-            <h4 id="question1" class="card-title">What is the closest star to our own sun? <span class="fas fa-check-circle mr-2"></span></h4>
+            <h4 id="question1" class="card-title">What is the closest star to our own sun? <span id="question1-checkmark" class="fas fa-check-circle mr-2"></span></h4>
             <div class="custom-control custom-radio custom-control-inline">
               <input type="radio" id="question1-answer1" name="question1-answer-group"
                      class="custom-control-input question1-answers">
@@ -41,7 +41,7 @@
 
         <div class="card my-2">
           <div class="card-body bg-dark text-white">
-            <h4 id="question2" class="card-title">Betelgeuse and Rigel are the two giant stars in which constellation? <span class="fas fa-check-circle mr-2"></span></h4>
+            <h4 id="question2" class="card-title">Betelgeuse and Rigel are the two giant stars in which constellation? <span id="question2-checkmark" class="fas fa-check-circle mr-2"></span></h4>
             <div class="custom-control custom-radio custom-control-inline">
               <input type="radio" id="question2-answer1" name="question2-answer-group"
                      class="custom-control-input question2-answers">
@@ -62,7 +62,7 @@
 
         <div class="card my-2">
           <div class="card-body bg-dark text-white">
-            <h4 id="question3" class="card-title">In our solar system, which planet has the shortest day? <span class="fas fa-check-circle mr-2"></span></h4>
+            <h4 id="question3" class="card-title">In our solar system, which planet has the shortest day? <span id="question3-checkmark" class="fas fa-check-circle mr-2"></span></h4>
             <div class="custom-control custom-radio custom-control-inline">
               <input type="radio" id="question3-answer1" name="question3-answer-group"
                      class="custom-control-input question3-answers">
@@ -83,7 +83,7 @@
 
         <div class="card my-2">
           <div class="card-body bg-dark text-white">
-            <h4 id="question4" class="card-title">What is the hottest planet in our solar system? <span class="fas fa-check-circle mr-2"></span></h4>
+            <h4 id="question4" class="card-title">What is the hottest planet in our solar system? <span id="question4-checkmark" class="fas fa-check-circle mr-2"></span></h4>
             <div class="custom-control custom-radio custom-control-inline">
               <input type="radio" id="question4-answer1" name="question4-answer-group"
                      class="custom-control-input question4-answers">
@@ -104,7 +104,7 @@
 
         <div class="card my-2">
           <div class="card-body bg-dark text-white">
-            <h4 id="question5" class="card-title">Titan, Enceladus, Mimas & Iapetus are just some of the moons orbiting which planet?  <span class="fas fa-check-circle mr-2"></span></h4>
+            <h4 id="question5" class="card-title">Titan, Enceladus, Mimas & Iapetus are just some of the moons orbiting which planet?  <span id="question5-checkmark" class="fas fa-check-circle mr-2"></span></h4>
             <div class="custom-control custom-radio custom-control-inline">
               <input type="radio" id="question5-answer1" name="question5-answer-group"
                      class="custom-control-input question5-answers">
@@ -126,6 +126,27 @@
       </div>
     </div>
 
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="gameOverModal" tabindex="-1" role="dialog" aria-labelledby="gameOverModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h4 class="modal-title" id="gameOverModalLabel">Game Over!</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="gameOverModalBody" class="modal-body bg-dark text-white">
+        <div>Correct Answers: <span id="correctAnswers"></span></div>
+        <div>Incorrect Answers: <span id="incorrectAnswers"></span></div>
+      </div>
+      <div class="modal-footer bg-dark text-white">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Start New Game</button>
+      </div>
+    </div>
   </div>
 </div>
 
