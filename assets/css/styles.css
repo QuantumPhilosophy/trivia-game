@@ -2,3 +2,11 @@ body {
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
     background-color: black;
 }
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
