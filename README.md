@@ -3,6 +3,9 @@
 ## Description
 This is a Trivia game using JavaScript for the logic and jQuery to manipulate HTML.
 
+### Production URL
+https://quantumphilosophy.github.io/trivia-game/
+
 ### How to Play
   * The player is given 120 seconds to answer all 5 questions.
   * Upon timer hitting 0 or answering all the questions the player is presented with a modal showing their correct and incorrect answer counts.
